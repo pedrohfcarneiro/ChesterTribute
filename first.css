@@ -87,6 +87,59 @@ main {
     max-width: 400px;
 }
 
+.chesterImg {
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: top , bottom;
+}
+
+.band {
+    /* margin: 20px; */
+}
+
+.lpImg {
+    width: 200px;
+    margin: 0 auto;
+    transform: translate(0,-50px);
+}
+
+.lpImg > img{
+    max-width: 200px;
+}
+
+.bandContainer {
+    display: grid;
+    height: 400px;
+    padding: 0px 0px 30px 0px;
+}
+
+.bandContainer > p {
+    font-size: 1.4em;
+    color: white;
+    grid-column: 1;
+    grid-row: 2/3;
+    background-color: rgba(0, 0, 0, 0.158);
+    padding-left: 20px;
+    padding-right: 20px;
+    text-shadow: 5px 5px 5px rgb(0, 0, 0);
+}
+
+.imageContainer {
+    height: 364px;
+    background-image: url(imgs/Untitled.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 1;
+    grid-row: 1/3;
+    opacity: 0.8;
+    -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0)), linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+    -webkit-mask-size: 100% 50%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: left top, left bottom;
+}
+
 footer {
     background-color: rgba(95, 90, 90, 0.377);
 }
@@ -96,18 +149,21 @@ footer p {
     text-align: center;
 }
 
-.chesterImg {
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
-    -webkit-mask-size: 100% 100%;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position: top , bottom;
-}
+
 
 @media (max-width:877px) {
     .aboutFlex {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+    }
+}
+
+@media (max-width:565px) {
+    .imageContainer {
+        height: 200px;
+        background-size: contain;
+        grid-row: 1/2;
     }
 }
 
@@ -126,5 +182,11 @@ footer p {
 @media (max-width:445px) {
     .aboutFlex img {
         max-width: 250px;
+    }
+
+    .imageContainer {
+        height: 200px;
+        background-size: contain;
+        grid-row: 1/2;
     }
 }
