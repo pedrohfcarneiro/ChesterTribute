@@ -62,19 +62,50 @@ main {
     border-left: 0;
     border-right: 0;
 }
+
 .aboutFlex {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 }
 
-.aboutText > p {
+.aboutText {
+    
+}
+
+.aboutText > div {
+    position: relative;
+}
+
+.watermark {
+    position: absolute;
+    width: 700px;
+    max-width: 700px;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-43%,-60%);
+    display: block;
+    z-index: -10;
+    overflow: visible;
+}
+
+.watermark img{
+    width: 600px;
+    height: auto;
+    opacity: 0.1;
+    transform: translate(0%,0%);
+}
+
+.aboutText > div > p {
     text-align: justify;
     /*text-align: center;*/
     text-indent: 20px;
     max-width: 500px;
     margin: 0 auto;
+    font-size: 1.3em;
 }
+
 
 .aboutText {
     flex: 1 1 420px;
@@ -82,7 +113,7 @@ main {
 }
 
 
-.aboutFlex img {
+.chesterImg img {
     max-width: 400px;
 }
 
@@ -167,6 +198,9 @@ footer p {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+    }
+    .watermark {
+        display: none;
     }
 }
 

@@ -20,7 +20,12 @@
             <h1>BIO</h1>
             <div class="aboutFlex">
                 <div class="aboutText">
-                    <p>Chester Charles Bennington foi um cantor, compositor, ator e vocalista da banda americana Linkin Park. Ele também trabalhou no grupo Dead by Sunrise e foi vocalista do Stone Temple Pilots entre 2013 e 2015. Bennington ganhou notoriedade devido a sua carreira como vocalista da banda Linkin Park.</p>
+                    <div>
+                        <p>Chester Charles Bennington foi um cantor, compositor, ator e vocalista da banda americana Linkin Park. Ele também trabalhou no grupo Dead by Sunrise e foi vocalista do Stone Temple Pilots entre 2013 e 2015. Bennington ganhou notoriedade devido a sua carreira como vocalista da banda Linkin Park.</p>
+                        <figure class="watermark">
+                            <img src="imgs/pngegg.png" alt="watermark">
+                        </figure>
+                    </div>
                 </div>
                 <figure class="chesterImg">
                     <img src="imgs/chester.jpg" alt="chester">
@@ -34,17 +39,24 @@
             <div class="bandContainer">
                 <div class="imageContainer">
                 </div>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti quia ipsum quasi sed accusamus ipsa, dolorem iure deserunt delectus nam tempore possimus suscipit accusantium eius provident. Omnis quas non saepe.</p>
+                <p>Linkin Park é uma banda norte-americana de rock formada em 1996 em Agoura Hills, na Califórnia. A banda é formada por Chester Bennington e Mike Shinoda (vocalistas), Joseph Hahn (Dj), Rob Bourdon (baterista), Brad Delson (guitarrista) e Dave Farrel (baixista).</p>
             </div>
         </section>
         <section class="musicWidget">
-            <div class="playerWrapper">
+            <div class="playerWrapperMinimized">
                 <div class="top-bar">
-                    <i class="material-icons">expand_more</i>
+                    <i class="material-icons">expand_less</i>
+                    <span class="controls">
+                        <i id="prev" class="material-icons">skip_previous</i>
+                        <span class="play-pause">
+                            <i class="material-icons">play_arrow</i>
+                        </span>
+                        <i id="next" class="material-icons">skip_next</i>
+                    </span>
                 </div>
-                <div class="img-area">
-                    <iframe width="380" height="260" src="https://www.youtube.com/embed/eVTXPUF4Oz4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
+                <div id="player" class="img-area">
+<!--                     <iframe width="380" height="260" src="https://www.youtube.com/embed/eVTXPUF4Oz4?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ -->                </div>
             </div>
         </section>
     </main>
