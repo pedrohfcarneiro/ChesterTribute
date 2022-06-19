@@ -39,7 +39,7 @@ header {
 }
 
 body {
-    height: 100vh;
+    /* height: 100vh; */
     background-color: black;
     
 }
@@ -136,6 +136,10 @@ main {
 
 .lpImg > img{
     max-width: 200px;
+}
+
+.band {
+    padding-bottom: 50px;
 }
 
 .bandContainer {
@@ -235,3 +239,22 @@ footer p {
         grid-row: 1/2;
     }
 }
+
+@media (max-width:420px) {
+    .bandContainer > p {
+        max-width: 780px;
+        text-align: center;
+        text-align: justify;
+        font-size: 1.4em;
+        color: white;
+        grid-column: 1;
+        grid-row: 2/3;
+        background-color: rgba(0, 0, 0, 0.158);
+        padding-left: 20px;
+        padding-right: 20px;
+        text-shadow: 5px 5px 5px rgb(0, 0, 0);
+        justify-self: center;
+        font-size: 1.1em;
+    }
+}
+

@@ -27,7 +27,7 @@
     height: 310px;
     overflow: hidden;
     position: fixed;
-    bottom: 10px;
+    bottom: 25px;
     left: 10px;
     background-color: #1b1b1b;
     border-radius: 15px;
@@ -58,7 +58,7 @@
     height: 50px;
     overflow: hidden;
     position: fixed;
-    bottom: 10px;
+    bottom: 25px;
     left: 10px;
     background-color: #1b1b1b;
     border-radius: 15px;
