@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
 @font-face {
     font-family: 'linkin';
     src: url(fonts/linkinpark.ttf) format('truetype');
@@ -104,6 +106,7 @@ main {
     max-width: 500px;
     margin: 0 auto;
     font-size: 1.3em;
+    font-family: 'Open Sans', sans-serif;
 }
 
 
@@ -153,6 +156,7 @@ main {
     text-align: center;
     text-align: justify;
     font-size: 1.4em;
+    font-family: 'Open Sans', sans-serif;
     color: white;
     grid-column: 1;
     grid-row: 2/3;
