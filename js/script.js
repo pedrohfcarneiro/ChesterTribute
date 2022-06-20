@@ -41,6 +41,7 @@ function onYouTubeIframeAPIReady() {
         'disablekb':1,
         'autoplay':1,
         'enablejsapi':1,
+        'allow':'autoplay'
     },
     //videoId: "eVTXPUF4Oz4",
     events: {
