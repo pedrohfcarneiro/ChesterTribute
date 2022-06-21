@@ -3,6 +3,7 @@ const expandMoreBtn = document.querySelector(".top-bar i");
 const playPauseBtn = playerWrapper.querySelector(".play-pause");
 const nextBtn = playerWrapper.querySelector("#next");
 const prevBtn = playerWrapper.querySelector("#prev");
+let interacted = false;
 
 expandMoreBtn.addEventListener("click", () => {
     if(playerWrapper.classList.contains("playerWrapperMinimized")) {
@@ -19,6 +20,10 @@ expandMoreBtn.addEventListener("click", () => {
     }
 })
 
+window.addEventListener('mousemove', e => {
+    interacted = true;
+    console.log(interacted);
+})
 
 let player;
 // This code loads the IFrame Player API code asynchronously. This is the Youtube-recommended script loading method
@@ -39,21 +44,27 @@ function onYouTubeIframeAPIReady() {
         'list':"PL9LkJszkF_Z6bJ82689htd2wch-HVbzCO",
         'controls':1,
         'disablekb':1,
-        'autoplay':1,
+        'autoplay':0,
         'enablejsapi':1,
         'allow':'autoplay'
     },
     //videoId: "eVTXPUF4Oz4",
     events: {
       // API event handlers
-      onReady: onPlayerReady
+      onReady: onPlayerReady,
+      onStateChange: onStateChangeCallback
     }
   });
 }
   // Player ready handler. Autoplay video when player is ready
 function onPlayerReady(event) {
-    playerWrapper.classList.add("playing");
-    playPauseBtn.querySelector("i").innerText = "pause";
+    console.log(event);
+}
+
+function onStateChangeCallback(event) {
+    console.log(event.data);
+    if(event.data === -1)
+        player.playVideo();
 }
   
 
