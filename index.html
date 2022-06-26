@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="first.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="imgs/istockphoto_1089241414_170667a_37p_icon.ico">
+    <title>Chester Tribute</title>
 </head>
 <body>
     <header>
@@ -18,7 +21,12 @@
             <h1>BIO</h1>
             <div class="aboutFlex">
                 <div class="aboutText">
-                    <p>Chester Charles Bennington foi um cantor, compositor, ator e vocalista da banda americana Linkin Park. Ele também trabalhou no grupo Dead by Sunrise e foi vocalista do Stone Temple Pilots entre 2013 e 2015. Bennington ganhou notoriedade devido a sua carreira como vocalista da banda Linkin Park.</p>
+                    <div>
+                        <p>Chester Charles Bennington foi um cantor, compositor, ator e vocalista da banda americana Linkin Park. Ele também trabalhou no grupo Dead by Sunrise e foi vocalista do Stone Temple Pilots entre 2013 e 2015. Bennington ganhou notoriedade devido a sua carreira como vocalista da banda Linkin Park.</p>
+                        <figure class="watermark">
+                            <img src="imgs/pngegg.png" alt="watermark">
+                        </figure>
+                    </div>
                 </div>
                 <figure class="chesterImg">
                     <img src="imgs/chester.jpg" alt="chester">
@@ -32,12 +40,31 @@
             <div class="bandContainer">
                 <div class="imageContainer">
                 </div>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti quia ipsum quasi sed accusamus ipsa, dolorem iure deserunt delectus nam tempore possimus suscipit accusantium eius provident. Omnis quas non saepe.</p>
+                <p>Linkin Park é uma banda norte-americana de rock formada em 1996 em Agoura Hills, na Califórnia. A banda é formada por Chester Bennington e Mike Shinoda (vocalistas), Joseph Hahn (Dj), Rob Bourdon (baterista), Brad Delson (guitarrista) e Dave Farrel (baixista).</p>
+            </div>
+        </section>
+        <section class="musicWidget">
+            <div class="playerWrapperMinimized">
+                <div class="top-bar">
+                    <i class="material-icons">expand_less</i>
+                    <span class="controls">
+                        <i id="prev" class="material-icons">skip_previous</i>
+                        <span class="play-pause">
+                            <i class="material-icons">play_arrow</i>
+                        </span>
+                        <i id="next" class="material-icons">skip_next</i>
+                    </span>
+                </div>
+                <div id="player" class="img-area">
+                </div>
             </div>
         </section>
     </main>
     <footer>
-        <p>All rights reserved.</p>
+        <p>Projeto com fins educativos.</p>
     </footer>
+
+    <script src="js/music-list.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

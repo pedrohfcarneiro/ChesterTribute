@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
 @font-face {
     font-family: 'linkin';
     src: url(fonts/linkinpark.ttf) format('truetype');
@@ -39,14 +41,12 @@ header {
 }
 
 body {
-    height: 100vh;
+    /* height: 100vh; */
     background-color: black;
     
 }
 
-main {
 
-}
 
 .about {
     color: white;
@@ -62,19 +62,49 @@ main {
     border-left: 0;
     border-right: 0;
 }
+
 .aboutFlex {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 }
 
-.aboutText > p {
+
+
+.aboutText > div {
+    position: relative;
+}
+
+.watermark {
+    position: absolute;
+    width: 700px;
+    max-width: 700px;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-43%,-60%);
+    display: block;
+    z-index: -10;
+    overflow: visible;
+}
+
+.watermark img{
+    width: 600px;
+    height: auto;
+    opacity: 0.1;
+    transform: translate(0%,0%);
+}
+
+.aboutText > div > p {
     text-align: justify;
     /*text-align: center;*/
     text-indent: 20px;
     max-width: 500px;
     margin: 0 auto;
+    font-size: 1.3em;
+    font-family: 'Open Sans', sans-serif;
 }
+
 
 .aboutText {
     flex: 1 1 420px;
@@ -82,20 +112,22 @@ main {
 }
 
 
-.aboutFlex img {
+.chesterImg img {
     max-width: 400px;
 }
 
 .chesterImg {
     -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
     -webkit-mask-size: 100% 100%;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: top , bottom;
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+    mask-position: top , bottom;
 }
 
-.band {
-    /* margin: 20px; */
-}
+
 
 .lpImg {
     width: 200px;
@@ -105,6 +137,10 @@ main {
 
 .lpImg > img{
     max-width: 200px;
+}
+
+.band {
+    padding-bottom: 50px;
 }
 
 .bandContainer {
@@ -118,6 +154,7 @@ main {
     text-align: center;
     text-align: justify;
     font-size: 1.4em;
+    font-family: 'Open Sans', sans-serif;
     color: white;
     grid-column: 1;
     grid-row: 2/3;
@@ -141,6 +178,10 @@ main {
     -webkit-mask-size: 100% 50%;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: left top, left bottom;
+    mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0)), linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+    mask-size: 100% 50%;
+    mask-repeat: no-repeat;
+    mask-position: left top, left bottom;
 }
 
 footer {
@@ -167,6 +208,9 @@ footer p {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+    }
+    .watermark {
+        display: none;
     }
 }
 
@@ -201,3 +245,22 @@ footer p {
         grid-row: 1/2;
     }
 }
+
+@media (max-width:420px) {
+    .bandContainer > p {
+        max-width: 780px;
+        text-align: center;
+        text-align: justify;
+        font-size: 1.4em;
+        color: white;
+        grid-column: 1;
+        grid-row: 2/3;
+        background-color: rgba(0, 0, 0, 0.158);
+        padding-left: 20px;
+        padding-right: 20px;
+        text-shadow: 5px 5px 5px rgb(0, 0, 0);
+        justify-self: center;
+        font-size: 1.1em;
+    }
+}
+
